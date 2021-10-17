@@ -658,3 +658,10 @@ a.pagination-item:hover {
 .back-to-top i {
     cursor: pointer;
 }
+
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    #home-menu{
+        margin-top: 91%;
+    }
+}
