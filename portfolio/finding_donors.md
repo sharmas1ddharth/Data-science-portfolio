@@ -1,3 +1,6 @@
+{% filter markdown %}
+
+
 ---
 layout: notebook
 title: Finding Donors for Charity using Machine Learning
@@ -913,3 +916,5 @@ print "F-score on testing data: {:.4f}".format(fbeta_score(y_test, reduced_predi
 On a reduced dataset, the final model's accuracy and f-score are still very comparable to the results on the full dataset. 
 
 The acccuracy is ~2.7% lower, while the f-score is ~5% lower. Even though Adaboost is relatively faster than one of the other classifiers that we tried out, I'd still consider training on the reduced data (acc. to features) if training time was a factor, and we have more training points to process. This decision will also depend on how important accuracy and f-scores are (or if f-score is more important than the accuracy, as the dip for that is larger than the dip in accuracy), to make a final decision regarding this.
+
+{% endfilter %}
