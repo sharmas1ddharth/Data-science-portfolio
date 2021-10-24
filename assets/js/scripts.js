@@ -90,14 +90,14 @@ $(document).ready(function() {
 
     // // Skill Set #1
     var data = [
-    { Skill: "Python", Level: 7},
-    { Skill: "R", Level: 7},
+    { Skill: "Python", Level: 8},
+    // { Skill: "R", Level: 1},
     { Skill: "Scikit-learn", Level: 7},
     { Skill: "Numpy", Level:  6},
-    { Skill: "Pandas", Level:  8},
+    { Skill: "Pandas", Level:  7},
     { Skill: "ML Algorithms", Level:  7},
-    { Skill: "Statistics", Level:  7},
-    { Skill: "SQL/NoSQL", Level:  8},
+    { Skill: "Statistics", Level:  6},
+    { Skill: "SQL/NoSQL", Level:  5},
     ];
 
     var myChart = new dimple.chart(svg, data);
@@ -145,11 +145,12 @@ $(document).ready(function() {
           { Skill: "HTML", Level:  9},
           { Skill: "CSS", Level:  7},
           { Skill: "Bootstrap", Level:  8},
-          { Skill: "JS/Jquery", Level:  7},
-          { Skill: "Java", Level:  6},
-          { Skill: "Ruby", Level:  6},
-          { Skill: "SQL/NoSQL", Level:  8},
-          { Skill: "Python", Level:  7}
+          // { Skill: "JS/Jquery", Level:  3},
+          { Skill: "Flask", Level:  6},
+          { Skill: "Django", Level:  5},
+          { Skill: "SQL/NoSQL", Level:  5},
+          { Skill: "Python", Level:  8},
+
         ];
 
     var myChart = new dimple.chart(svg, data);
@@ -162,14 +163,69 @@ $(document).ready(function() {
 
     // myChart.setBounds(60, 30, 510, 305)
     var x = myChart.addCategoryAxis("x", "Skill");
-    x.addOrderRule(["HTML", "CSS", "JS/Jquery","Bootstrap","Java","Ruby","Python","SQL/NoSQL"]); //Set order 
+    x.addOrderRule(["HTML", "CSS", "JS/Jquery","Bootstrap","Flask","Django","Python","SQL/NoSQL"]); //Set order 
     var y = myChart.addMeasureAxis("y", "Level");
     y.overrideMin = 0;
     y.overrideMax = 10;
     myChart.addSeries(null, dimple.plot.bar);
     myChart.draw(1000);
 
-    } 
+    }
+    
+
+
+
+    else if (this.value=='radioOT') {
+    
+      //Ugly hack to redraw chart
+      d3.select('svg').remove();
+  
+      var svg = dimple.newSvg("#skillchart-container", "100%","100%");
+  
+      d3.select("html")
+                  .style("height", "100%")
+                  .style("overflow", "hidden");
+      d3.select("body")
+                  .style("height", "100%")
+                  .style("overflow", "hidden");
+  
+      // // Skill Set #2
+      var data = [
+            { Skill: "Git/GitHub", Level:  8},
+            { Skill: "Jupyter Notebooks", Level: 7},
+            { Skill: "Tableau", Level: 6},
+            
+            // { Skill: "JS/Jquery", Level:  3},
+            // { Skill: "Java", Level:  6},
+            // { Skill: "Ruby", Level:  6},
+            // { Skill: "SQL/NoSQL", Level:  5},
+            // { Skill: "Python", Level:  8},
+  
+          ];
+  
+      var myChart = new dimple.chart(svg, data);
+      myChart.setMargins("40px","40px","30px","90px");
+  
+      //Set default colour
+      myChart.defaultColors = [
+            new dimple.color("#006400"),
+        ];
+  
+      // myChart.setBounds(60, 30, 510, 305)
+      var x = myChart.addCategoryAxis("x", "Skill");
+      x.addOrderRule(["HTML", "CSS", "JS/Jquery","Bootstrap","Java","Ruby","Python","SQL/NoSQL"]); //Set order 
+      var y = myChart.addMeasureAxis("y", "Level");
+      y.overrideMin = 0;
+      y.overrideMax = 10;
+      myChart.addSeries(null, dimple.plot.bar);
+      myChart.draw(1000);
+  
+      } 
+
+
+
+
+    
 
     else {
 
@@ -187,14 +243,14 @@ $(document).ready(function() {
 
     // // Skill Set #1
     var data = [
-    { Skill: "Python", Level: 7},
-    { Skill: "R", Level: 6},
+      { Skill: "Python", Level: 8},
+    // { Skill: "R", Level: 1},
     { Skill: "Scikit-learn", Level: 7},
     { Skill: "Numpy", Level:  6},
-    { Skill: "Pandas", Level:  8},
+    { Skill: "Pandas", Level:  7},
     { Skill: "ML Algorithms", Level:  7},
-    { Skill: "Statistics", Level:  7},
-    { Skill: "SQL/NoSQL", Level:  8},
+    { Skill: "Statistics", Level:  6},
+    { Skill: "SQL/NoSQL", Level:  5},
     ];
 
     var myChart = new dimple.chart(svg, data);
