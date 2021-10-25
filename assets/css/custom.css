@@ -662,6 +662,6 @@ a.pagination-item:hover {
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
     #home-menu{
-        margin-top: 70%;
+        margin-top: 50%;
     }
 }
