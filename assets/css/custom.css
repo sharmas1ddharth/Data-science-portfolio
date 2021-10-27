@@ -636,6 +636,10 @@ a.pagination-item:hover {
     bottom: 0;
     padding-bottom: 2rem;
 }
+
+#resume-download{
+    margin-left: 94%;
+}
 /*Media-Window triggers*/
 @media (max-height: 540px) {
     #scroll-down {
@@ -662,6 +666,19 @@ a.pagination-item:hover {
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
     #home-menu{
-        margin-top: 50%;
+        margin-top: 60%;
+    }
+
+    #skill-switch .btn{
+        font-size: 0.6em;
+        margin-bottom: 0px;
+    }
+
+    #resume-download{
+        margin-left: 40%;
+    }
+
+    #resume-frame{
+        width: 78%;
     }
 }
